@@ -26,10 +26,10 @@ May grace guide us all in these troubled times.
 
 ## Quests Completed (Projects)
 
-1. [🧠 Gesture-based Controller](#)
+1. [[🧠 Gesture-based Controller]]
 2. [♟️ Reconnaissance Blind Chess Bot](#)
 3. [🛰️ NASA DebriSat Project](#)
-4. 
+4. [[Using Chest X-ray Images to aid Diagnosis]]
 
 ---
 

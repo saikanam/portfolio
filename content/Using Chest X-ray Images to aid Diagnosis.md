@@ -3,6 +3,7 @@ title: Using Chest X-ray Images to aid Diagnosis
 draft: false
 tags:
   - Projects
+  - MachineLearning
 ---
 
 # Using Chest X-ray Images to aid Diagnosis 
