@@ -8,7 +8,7 @@ Hark, Tarnished One! I am Saik, a humble wanderer in these Lands Between. School
 
 Now, I stand at the crossroads of fate, a Tarnished seeking purpose. I offer what meager skills I possess in service to our cause. Should you find use for one such as I, I would be honored to walk this perilous path alongside you. 
 
-> [!IMPORTANT] Open to Work
+> [!IMPORTANT] Open to Work Starting Jan 2025
 
 I will try my earnest to make the world a gentler place. A thousand year voyage; guided by compassion. 
 
