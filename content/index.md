@@ -20,7 +20,7 @@ May grace guide us all in these troubled times.
 
 ---
 
-## Quests Completed
+## Quests Completed (Projects)
 
 1. [🧠 Gesture-based Controller](#)
 2. [♟️ Reconnaissance Blind Chess Bot](#)
