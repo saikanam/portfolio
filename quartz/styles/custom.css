@@ -1,0 +1,39 @@
+/* Custom styles for Quartz website */
+
+   /* Hover effect for links */
+   a:hover {
+    color: #ff6b6b;
+    transition: color 0.3s ease;
+  }
+
+  /* Custom button styles */
+  .custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4ecdc4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-button:hover {
+    background-color: #45b7aa;
+  }
+
+  /* Tag button styles */
+  .tag-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f7f7f7;
+    color: #333;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .tag-button:hover {
+    background-color: #e0e0e0;
+  }
+  
