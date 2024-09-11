@@ -26,6 +26,7 @@ export default (() => {
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
             <link rel="stylesheet" href={googleFontHref(cfg.theme)} />
           </>
         )}
@@ -44,6 +45,7 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+            
       </head>
     )
   }
