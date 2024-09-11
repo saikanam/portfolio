@@ -2,6 +2,7 @@
 title: Portfolio
 draft: false
 ---
+
 # Welcome, traveler beyond the fog!
 
 Hark, Tarnished One! I am Saik, a humble wanderer in these Lands Between. Schooled in the arcane arts of Computer Science, I've toiled in realms called Intel, NASA, and Allegro. I wield the tongues of Python, C++, and more, crafting modest tools to aid our fractured world. Though my skills are but a candle to the darkness that surrounds us, I offer them in service to our cause.
@@ -42,5 +43,3 @@ May grace guide us all in these troubled times.
 [<img src="/api/placeholder/150/50" alt="Send Message" />](#)
 
 </div>
-
----
