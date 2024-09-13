@@ -9,7 +9,7 @@ export default ((opts?: Partial<Options>) => {
     return (
       <nav className={`navbar ${displayClass ?? ""}`}>
         <div className="nav-buttons">
-          <a href="https://saikanam.github.io/portfolio" className="nav-button active">
+          <a href="https://saikanam.github.io/portfolio/" className="nav-button active">
             <span>Home</span>
           </a>
           <a href="https://saikanam.github.io/portfolio/Projects/" className="nav-button">
