@@ -1,3 +1,11 @@
+---
+title: Paper - Leveraging LLMs for SQL Generation in Computational Biology
+draft: false
+tags:
+  - Projects
+  - MachineLearning
+---
+
 # Abstract
 
 Advancements in Large Language Models (LLMs) have revolutionized automatic code generation
