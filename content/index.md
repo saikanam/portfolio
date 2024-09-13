@@ -31,7 +31,7 @@ May grace guide us all in these troubled times.
 2. [♟️ Reconnaissance Blind Chess Bot](#)
 3. [🛰️ NASA DebriSat Project](#)
 4. [[Using Chest X-ray Images to aid Diagnosis]]
-5. [[Paper - Leveraging LLMs for SQL Generation in Computational Biology]]
+5. [[Leveraging LLMs for SQL Generation in Computational Biology]]
 
 ---
 

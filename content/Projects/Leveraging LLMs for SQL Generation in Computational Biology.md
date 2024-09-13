@@ -1,5 +1,5 @@
 ---
-title: Paper - Leveraging LLMs for SQL Generation in Computational Biology
+title: Leveraging LLMs for SQL Generation in Computational Biology
 draft: false
 tags:
   - Projects
