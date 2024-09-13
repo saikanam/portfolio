@@ -12,8 +12,8 @@ export default ((opts?: Partial<Options>) => {
           <a href="https://saikanam.github.io/portfolio" className="nav-button active">
             <span>Home</span>
           </a>
-          <a href="#artifacts" className="nav-button">
-            <span>Artifacts</span>
+          <a href="https://saikanam.github.io/portfolio/Projects/" className="nav-button">
+            <span>Projects</span>
           </a>
           <a href="#quests" className="nav-button">
             <span>Quests</span>
