@@ -1,12 +1,12 @@
 import { Components, Jsx, toJsxRuntime } from "hast-util-to-jsx-runtime"
 import { Node, Root } from "hast"
-import { Fragment, jsx, jsxs } from "preact/jsx-runtime"
+import { Fragment, jsx, jsxs } from "react/jsx-runtime"
 import { trace } from "./trace"
 import { type FilePath } from "./path"
 
 const customComponents: Components = {
   table: (props) => (
-    <div class="table-container">
+    <div className="table-container">
       <table {...props} />
     </div>
   ),

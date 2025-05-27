@@ -3,7 +3,7 @@ import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
-import { JSX } from "preact"
+import { JSX } from "react"
 import style from "./styles/contentMeta.scss"
 
 interface ContentMetaOptions {
@@ -45,7 +45,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       const segmentsElements = segments.map((segment) => <span>{segment}</span>)
 
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+        <p show-comma={options.showComma} className={classNames(displayClass, "content-meta")}>
           {segmentsElements}
         </p>
       )

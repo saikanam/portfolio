@@ -1,11 +1,24 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 const Header: QuartzComponent = ({ children }: QuartzComponentProps) => {
-  return children.length > 0 ? <header>{children}</header> : null
+  return children && children.length > 0 ? <header>{children}</header> : null
 }
 
 Header.css = `
 header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  gap: 0;
+}
+
+header .particle-header {
+  width: 100%;
+  margin: 0;
+}
+
+header > div:not(.particle-header) {
   display: flex;
   flex-direction: row;
   align-items: center;

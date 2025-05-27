@@ -9,7 +9,7 @@ import { classNames } from "../util/lang"
 
 const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
   return (
-    <button class={classNames(displayClass, "darkmode")} id="darkmode">
+    <button className={classNames(displayClass, "darkmode")} id="darkmode">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -18,7 +18,7 @@ const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) 
         x="0px"
         y="0px"
         viewBox="0 0 35 35"
-        style="enable-background:new 0 0 35 35"
+        style={{ enableBackground: "new 0 0 35 35" } as React.CSSProperties}
         xmlSpace="preserve"
         aria-label={i18n(cfg.locale).components.themeToggle.darkMode}
       >
@@ -33,7 +33,7 @@ const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) 
         x="0px"
         y="0px"
         viewBox="0 0 100 100"
-        style="enable-background:new 0 0 100 100"
+        style={{ enableBackground: "new 0 0 100 100" } as React.CSSProperties}
         xmlSpace="preserve"
         aria-label={i18n(cfg.locale).components.themeToggle.lightMode}
       >

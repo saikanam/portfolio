@@ -5,8 +5,8 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
+    Component.ManualShadcnTest(),
     Component.NavBar()
-   
   ],
   afterBody: [],
   footer: Component.Footer({
@@ -36,6 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    // Component.ShadcnTest(), // Re-enable after fixing Button component
   ],
 }
 
