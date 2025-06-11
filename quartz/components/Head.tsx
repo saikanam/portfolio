@@ -18,10 +18,40 @@ export default (() => {
     const iconPath = joinSegments(baseDir, "static/icon.png")
     const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 
+    // Critical CSS to prevent flash of unstyled content
+    const criticalCSS = `
+      html, body {
+        background-color: ${cfg.theme.colors.lightMode.light};
+        color: ${cfg.theme.colors.lightMode.dark};
+        margin: 0;
+        padding: 0;
+        font-family: ${cfg.theme.typography.body}, system-ui, -apple-system, sans-serif;
+        transition: none !important;
+      }
+      
+      html.dark, .dark body {
+        background-color: ${cfg.theme.colors.darkMode.light};
+        color: ${cfg.theme.colors.darkMode.dark};
+      }
+      
+      .center, #quartz-root, .page {
+        background-color: inherit;
+      }
+    `
+
     return (
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        
+        {/* Preload critical resources */}
+        {css.map((href) => (
+          <link key={`preload-${href}`} rel="preload" href={href} as="style" />
+        ))}
+        
+        {/* Inline critical CSS to prevent flash */}
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />

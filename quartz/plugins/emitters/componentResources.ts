@@ -6,6 +6,7 @@ import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 import styles from "../../styles/custom.scss"
+import tailwindBase from "../../styles/base.css"
 import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
@@ -234,6 +235,7 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
       const stylesheet = joinStyles(
         ctx.cfg.configuration.theme,
         googleFontsStyleSheet,
+        tailwindBase,
         ...componentResources.css,
         styles,
       )
@@ -249,7 +251,7 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
           ext: ".css",
           content: transform({
             filename: "index.css",
-            code: Buffer.from(stylesheet),
+            code: new Uint8Array(Buffer.from(stylesheet)),
             minify: true,
             targets: {
               safari: (15 << 16) | (6 << 8), // 15.6

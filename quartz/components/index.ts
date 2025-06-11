@@ -21,6 +21,8 @@ import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import NavBar from "./NavBar"
+import SimpleButtonTest from "./SimpleButtonTest"
+import ManualShadcnTest from "./ManualShadcnTest"
 
 export {
   NavBar,
@@ -46,4 +48,6 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  SimpleButtonTest,
+  ManualShadcnTest,
 }

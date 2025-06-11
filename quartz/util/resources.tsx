@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto"
-import { JSX } from "preact/jsx-runtime"
+import { JSX } from "react/jsx-runtime"
 
 export type JSResource = {
   loadTime: "beforeDOMReady" | "afterDOMReady"

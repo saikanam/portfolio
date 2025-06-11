@@ -39,11 +39,25 @@ function notifyNav(url: FullSlug) {
   document.dispatchEvent(event)
 }
 
+// Add loading state management
+function setLoadingState(loading: boolean) {
+  document.body.classList.toggle('page-loading', loading)
+  if (loading) {
+    // Prevent layout shifts during navigation
+    document.body.style.minHeight = document.body.offsetHeight + 'px'
+  } else {
+    document.body.style.minHeight = ''
+  }
+}
+
 const cleanupFns: Set<(...args: any[]) => void> = new Set()
 window.addCleanup = (fn) => cleanupFns.add(fn)
 
 let p: DOMParser
 async function navigate(url: URL, isBack: boolean = false) {
+  // Set loading state to prevent flash
+  setLoadingState(true)
+  
   p = p || new DOMParser()
   const contents = await fetch(`${url}`)
     .then((res) => {
@@ -58,7 +72,10 @@ async function navigate(url: URL, isBack: boolean = false) {
       window.location.assign(url)
     })
 
-  if (!contents) return
+  if (!contents) {
+    setLoadingState(false)
+    return
+  }
 
   // cleanup old
   cleanupFns.forEach((fn) => fn())
@@ -80,8 +97,19 @@ async function navigate(url: URL, isBack: boolean = false) {
   announcer.dataset.persist = ""
   html.body.appendChild(announcer)
 
+  // Ensure styles are preserved during morph
+  const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  
   // morph body
   micromorph(document.body, html.body)
+
+  // Restore theme class if needed
+  if (currentTheme === 'dark' && !document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.add('dark')
+  }
+
+  // Clear loading state before scrolling
+  setLoadingState(false)
 
   // scroll into place and add history
   if (!isBack) {
@@ -128,6 +156,7 @@ function createRouter() {
       try {
         navigate(url, false)
       } catch (e) {
+        setLoadingState(false)
         window.location.assign(url)
       }
     })
@@ -138,6 +167,7 @@ function createRouter() {
       try {
         navigate(new URL(window.location.toString()), true)
       } catch (e) {
+        setLoadingState(false)
         window.location.reload()
       }
       return
